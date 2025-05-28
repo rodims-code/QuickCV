@@ -5,6 +5,7 @@ import {
   ArrowUpCircleIcon,
   BarChartIcon,
   CameraIcon,
+  CircleUser,
   ClipboardListIcon,
   DatabaseIcon,
   FileCodeIcon,
@@ -16,6 +17,8 @@ import {
   ListIcon,
   SearchIcon,
   SettingsIcon,
+  User,
+  UserPen,
   UsersIcon,
 } from "lucide-react"
 
@@ -32,6 +35,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
+import Link from "next/link"
 
 const data = {
   user: {
@@ -42,13 +46,13 @@ const data = {
   navMain: [
     {
       title: "Dashboard",
-      url: "#",
+      url: "/dashboard", // Remplacez "#" par le chemin de votre page
       icon: LayoutDashboardIcon,
     },
     {
-      title: "Lifecycle",
-      url: "#",
-      icon: ListIcon,
+      title: "Create your CV",
+      url: "resume/base",
+      icon: User,
     },
     {
       title: "Analytics",
@@ -125,11 +129,7 @@ const data = {
       url: "#",
       icon: HelpCircleIcon,
     },
-    {
-      title: "Search",
-      url: "#",
-      icon: SearchIcon,
-    },
+
   ],
   documents: [
     {
@@ -160,10 +160,10 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               asChild
               className="data-[slot=sidebar-menu-button]:!p-1.5"
             >
-              <a href="#">
-                <ArrowUpCircleIcon className="h-5 w-5" />
-                <span className="text-base font-semibold">Acme Inc.</span>
-              </a>
+              <Link href="/">
+                <CircleUser />
+                <span className="color-primary font-bold">QuickCV</span>
+              </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>
