@@ -7,6 +7,7 @@ import {
   CameraIcon,
   CircleUser,
   ClipboardListIcon,
+  Cloud,
   DatabaseIcon,
   FileCodeIcon,
   FileIcon,
@@ -50,7 +51,7 @@ const data = {
       icon: LayoutDashboardIcon,
     },
     {
-      title: "Create your CV",
+      title: "Create your resume",
       url: "resume/base",
       icon: User,
     },
@@ -60,19 +61,15 @@ const data = {
       icon: BarChartIcon,
     },
     {
-      title: "Projects",
+      title: "Documents",
       url: "#",
       icon: FolderIcon,
     },
-    {
-      title: "Team",
-      url: "#",
-      icon: UsersIcon,
-    },
+
   ],
   navClouds: [
     {
-      title: "Capture",
+      title: "Cloud",
       icon: CameraIcon,
       isActive: true,
       url: "#",
@@ -133,9 +130,9 @@ const data = {
   ],
   documents: [
     {
-      name: "Data Library",
+      name: "Cloud",
       url: "#",
-      icon: DatabaseIcon,
+      icon: Cloud,
     },
     {
       name: "Reports",
