@@ -1,5 +1,5 @@
 "use client";
-import { Eye, RotateCw, Save } from "lucide-react";
+import { Eye, House, RotateCw, Save } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import html2canvas from "html2canvas-pro";
@@ -31,6 +31,7 @@ import LanguageForm from "@/app/components/LanguageForm";
 import SkillForm from "@/app/components/SkillForm";
 import HobbyForm from "@/app/components/HobbyForm";
 import CVPreview from "@/app/components/CVPreview";
+import Link from "next/link";
 
 export default function Home() {
   const [personalDetails, setPersonalDetails] = useState<PersonalDetails>(
@@ -156,14 +157,20 @@ export default function Home() {
 
   return (
     <div>
-      <div className="hidden lg:block">
-        <section className="flex items-center h-screen">
-          <div className="w-1/3 h-full p-10 bg-base-200 scrollable no-scrollbar ">
-            <div className="mb-4 flex justify-between items-center">
-              <h1 className="text-2xl font-bold italic">
+      <div className=" lg:block">
+        <section className="flex items-center h-screen ">
+          <div className="w-1/3 h-full p-10 bg-base-200 scrollable no-scrollbar hidden md:block">
+            <div className="mb-4 flex justify-between items-center gap-4">
+{/*               <h1 className="text-2xl font-bold italic">
                 Quick
                 <span className="text-primary">CV</span>
-              </h1>
+              </h1> */}
+              <button 
+              className="btn btn-primary"
+              onClick={() => (window.location.href = "/")}
+              >
+                <House />
+              </button>
 
               <button
                 className="btn btn-primary"
@@ -360,7 +367,7 @@ export default function Home() {
         </dialog>
       </div>
 
-      <div className="lg:hidden">
+      {/* <div className="lg:hidden">
         <div className="hero bg-base-200 min-h-screen">
           <div className="hero-content text-center">
             <div className="max-w-md">
@@ -381,7 +388,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
